@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/backgroud3"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo"
+
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="90dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuário ou Senha invalidos!"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="gone"
+            android:id="@+id/tvStatusLogin"
+            android:layout_gravity="center"
+            android:textSize="5pt"/>
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/radioedittext"
+            android:drawableLeft="@drawable/ic_edtemail"
+            android:hint="Email"
+            android:textColorHint="#60FFFFFF"
+            android:textColor="@android:color/white"
+            android:textSize="7pt"
+
+            />
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radioedittext"
+            android:drawableLeft="@drawable/ic_edtpassword"
+            android:hint="Senha"
+            android:textColorHint="#60FFFFFF"
+            android:textColor="@android:color/white"
+            android:inputType="textPassword"
+            android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/btnLogar"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:alpha="0.8"
+            android:background="@drawable/radiobotoes"
+            android:text="Entrar"
+            android:textColor="@android:color/white"
+
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_gravity="center"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRecupSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="65dp"
+            android:alpha="0.9"
+            android:background="@android:color/transparent"
+            android:hint="Esqueceu a Senha?"
+            android:textColorHint="@android:color/white"
+            android:textSize="6pt" />
+
+        <Button
+            android:id="@+id/btnNovaConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:alpha="0.9"
+            android:background="@android:color/transparent"
+            android:hint="Criar Conta"
+
+            android:textColorHint="@android:color/white"
+            android:textSize="6pt" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

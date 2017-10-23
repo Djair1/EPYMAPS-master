@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/backgroud3"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Criar Conta"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/radioedittext"
+            android:drawableLeft="@drawable/ic_edtuser"
+            android:hint="Nome"
+            android:textColor="@android:color/white"
+            android:textColorHint="#60FFFFFF"
+            android:textSize="7pt" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radioedittext"
+            android:drawableLeft="@drawable/ic_edtemail"
+            android:hint="Email"
+            android:textColor="@android:color/white"
+            android:textColorHint="#60FFFFFF"
+            android:textSize="7pt"
+
+            />
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radioedittext"
+            android:drawableLeft="@drawable/ic_edtpassword"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="#60FFFFFF"
+            android:textSize="7pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spEstados"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/radiospinner"
+                android:prompt="@string/estados"
+                android:textColor="@android:color/white"
+
+                />
+
+            <Spinner
+                android:id="@+id/spCidades"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/radiospinner"
+                android:prompt="@string/cidades"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMasculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:text="Masculino"
+                    android:textColor="@android:color/white"
+                    android:textSize="7pt" />
+
+                <RadioButton
+                    android:id="@+id/rbFeminino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:text="Feminino"
+                    android:textColor="@android:color/white"
+                    android:textSize="7pt" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:alpha="0.8"
+            android:background="@drawable/radiobotoes"
+            android:text="Continuar"
+            android:textColor="@android:color/white"
+
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnVoltarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.9"
+            android:background="@android:color/transparent"
+            android:hint="Voltar ao Login"
+            android:textColorHint="@android:color/white"
+            android:textSize="7pt" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
