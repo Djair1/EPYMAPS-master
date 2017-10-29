@@ -4,21 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha="0.9"
-    android:background="@drawable/backgroud3"
     android:orientation="vertical">
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="72dp"
         android:text="Recuperar Conta"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
 
-        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -40,8 +49,8 @@
             android:drawableLeft="@drawable/ic_edtemail"
             android:hint="Email"
 
-            android:textColor="@android:color/white"
-            android:textColorHint="#60FFFFFF"
+            android:textColor="@android:color/black"
+            android:textColorHint="#000000"
             android:textSize="7pt" />
 
         <Button
@@ -53,7 +62,7 @@
             android:alpha="0.8"
             android:background="@drawable/radiobotoes"
             android:text="Enviar"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
 
             />
     </LinearLayout>
@@ -78,7 +87,7 @@
             android:alpha="0.9"
             android:background="@android:color/transparent"
             android:hint="Voltar ao Login"
-            android:textColorHint="@android:color/white"
+            android:textColorHint="@android:color/black"
             android:textSize="7pt" />
 
     </RelativeLayout>
