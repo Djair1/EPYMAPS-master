@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EPYMAPS.iml" filepath="$PROJECT_DIR$/EPYMAPS.iml" />
+      <module fileurl="file://C:\Users\bruno\Documents\GitHub\EPYMAPS-master\EPYMAPS-master\EPYMAPS.iml" filepath="C:\Users\bruno\Documents\GitHub\EPYMAPS-master\EPYMAPS-master\EPYMAPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/EPYMAPS-master.iml" filepath="$PROJECT_DIR$/EPYMAPS-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
