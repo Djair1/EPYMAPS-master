@@ -1,16 +1,21 @@
 package br.com.educacao.epymaps.Activitys;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 
 import java.util.List;
 
@@ -46,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        final TabAdpter tbAdapter = new TabAdpter(getSupportFragmentManager(),tabLayout.getTabCount());
+        final TabAdpter tbAdapter = new TabAdpter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(tbAdapter);
 
 
@@ -79,7 +84,29 @@ public class HomeActivity extends AppCompatActivity {
             ArrayAdapter<FichaDiaria> adapterFicha = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayFicha);
             lvFichasRespData.setAdapter(adapterFicha);
         }
+
+        if (AccessToken.getCurrentAccessToken() == null) {
+            IrParaLogin();
+        }
+
+
     }
+
+    private void IrParaLogin() {
+
+        Intent it = new Intent(this, TelaLogin.class);
+        it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(it);
+
+
+    }
+
+public void logout(View view){
+
+
+    LoginManager.getInstance().logOut();
+    IrParaLogin();
+}
 /*
 
 

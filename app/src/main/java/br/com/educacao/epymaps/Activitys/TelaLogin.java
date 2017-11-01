@@ -11,13 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 import br.com.educacao.epymaps.DAO.UsuarioDAO;
+import br.com.educacao.epymaps.Fragmentos.FragmentoMaps;
 import br.com.educacao.epymaps.R;
 
 public class TelaLogin extends AppCompatActivity {
@@ -26,6 +29,8 @@ public class TelaLogin extends AppCompatActivity {
     private Button btnLogar;
     private Button btnRecuperarSenha;
     private EditText edtEmail;
+    private LoginButton loginButton;
+    private CallbackManager CallbackManager;
     private EditText edtSenha;
     private TextView tvStatusLogin;
     UsuarioDAO usuarioDAO;
@@ -49,18 +54,27 @@ public class TelaLogin extends AppCompatActivity {
         edtSenha.getBackground().setAlpha(60);
 
 
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+
+         loginButton.registerCallback(CallbackManager, new FacebookCallback<LoginResult>() {
+                     @Override
+                     public void onSuccess(LoginResult loginResult) {
+                         // App code
+                          IrTelaInicial();
 
 
+                     }
 
+                     @Override
+                     public void onCancel() {
+                         // App code
+                     }
 
-
-
-
-
-
-
-
+                     @Override
+                     public void onError(FacebookException exception) {
+                         // App code
+                     }
+         });
 
 
 
@@ -102,6 +116,17 @@ public class TelaLogin extends AppCompatActivity {
 
     }
 
+    private void IrTelaInicial() {
+
+        Intent it = new Intent(this, HomeActivity.class);
+       it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+       startActivity(it);
+
+
+
+
+    }
+
     private boolean validarCampos() {
         if (TextUtils.isEmpty(edtEmail.getText().toString())) {
             edtEmail.setError("Preecha o email");
@@ -116,7 +141,11 @@ public class TelaLogin extends AppCompatActivity {
         return true;
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        CallbackManager.onActivityResult(requestCode, resultCode, data);
+    }
 
 
     }

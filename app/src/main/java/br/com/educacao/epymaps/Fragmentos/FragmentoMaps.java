@@ -1,12 +1,15 @@
 package br.com.educacao.epymaps.Fragmentos;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import br.com.educacao.epymaps.R;
+
 
 
 /**
@@ -23,12 +26,14 @@ public class FragmentoMaps extends Fragment {
         FragmentoMaps fragmento = new FragmentoMaps();
         fragmento.setArguments(args);
         return fragmento;
-    }
 
-    @Override
+}
+
+     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
+
     }
 
 
