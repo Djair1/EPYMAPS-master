@@ -2,5 +2,7 @@
     <string name="app_name">EPYMAPS</string>
     <string name="estados">UF..</string>
     <string name="cidades">Cidades..</string>
+    <string name="facebook_app_id">128644004510238</string>
+    <string name="fb_login_protocol_scheme">fb128644004510238</string>
 
 </resources>

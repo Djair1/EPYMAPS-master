@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "520631206228",
+    "firebase_url": "https://epymaps-master.firebaseio.com",
+    "project_id": "epymaps-master",
+    "storage_bucket": "epymaps-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520631206228:android:a0bae49f0cc2b7ed",
+        "android_client_info": {
+          "package_name": "br.com.educacao.epymaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520631206228-61krpg4b1m4vupmi1p34qrj1seb6vucp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.educacao.epymaps",
+            "certificate_hash": "16dcf466d8d5866a353b5261b79419c2e8348971"
+          }
+        },
+        {
+          "client_id": "520631206228-6p8720fcskg822nk55m7mdmdivl40jvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA07k6HrCzftB97pTAOVXKQsMcXsb2NCdg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520631206228-6p8720fcskg822nk55m7mdmdivl40jvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

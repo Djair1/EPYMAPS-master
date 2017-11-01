@@ -120,6 +120,15 @@
             android:textColorHint="@android:color/black"
             android:textSize="6pt" />
 
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnRecupSenha"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="41dp" />
     </RelativeLayout>
 
 
